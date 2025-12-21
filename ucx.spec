@@ -24,6 +24,8 @@ BuildRoot: %(mktemp -ud %{_tmppath}/%{name}-%{version}-%{release}-XXXXXX)
 # UCX currently supports only the following architectures
 ExclusiveArch: aarch64 ppc64le %{x86_64}
 
+BuildRequires:	libtool-base
+BuildRequires:	slibtool
 BuildRequires: automake autoconf libtool gcc-c++
 BuildRequires:	pkgconfig(numa)
 %if %{with cma}
